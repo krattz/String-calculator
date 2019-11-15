@@ -6,16 +6,19 @@ class StringCalculator{
     Add(string){
         let sum =0;
         let msg = "";
+        let nega="";
         let nstr = string.match(this.regex1);
         try{
+            for(var i = 0;i<string.length;i++){
+                
             if(string.includes("-")){
-                for(let i = 0; i<nstr.length;i++){
-                    msg = nstr.length;
-                    if (nstr[i]<0){
-                    console.log(nstr[i]);
-                    }
+                let neg = string.indexOf("-")+1;
+                if(neg.isNaN != true){
+                  nega = parseInt(string.charAt(neg)*(-1));
                 }
-                throw("negatives not allowed")
+               
+            }
+                throw("negative " + nega+" not allowed");
 
             }
         }catch(e){return "error "+e ;}
@@ -36,6 +39,8 @@ class StringCalculator{
         }     
     }   
 }
+let calculator = new StringCalculator();
+console.log(calculator.Add("1,-2,3"));
 module.exports = {
     StringCalculator
 }
