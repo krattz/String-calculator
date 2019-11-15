@@ -39,8 +39,6 @@ class StringCalculator{
         }     
     }   
 }
-let calculator = new StringCalculator();
-console.log(calculator.Add("1,-2,3"));
 module.exports = {
     StringCalculator
 }
