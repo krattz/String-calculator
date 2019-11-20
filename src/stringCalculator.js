@@ -5,7 +5,6 @@ class StringCalculator{
     }
     Add(string){
         let sum =0;
-        let msg = "";
         let nega="";
         let nstr = string.match(this.regex1);
         try{
@@ -15,13 +14,12 @@ class StringCalculator{
                 let neg = string.indexOf("-")+1;
                 if(neg.isNaN != true){
                   nega = parseInt(string.charAt(neg)*(-1));
-                }
-               
-            }
+                } 
                 throw("negative " + nega+" not allowed");
-
             }
-        }catch(e){return "error "+e ;}
+            }    
+        }  
+        catch(e){return "error "+e ;}
          
         if (string == "" ){
             return 0;
@@ -39,6 +37,8 @@ class StringCalculator{
         }     
     }   
 }
+let calc = new StringCalculator();
+console.log(calc.Add("1,2,56"));
 module.exports = {
     StringCalculator
 }

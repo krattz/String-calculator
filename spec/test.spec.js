@@ -8,6 +8,6 @@ describe('function that adds numbers from a string',function(){
         expect(tst.Add("1,2")).toBe(3);
     });
     it('return sum of multiple numbers seperated by special characters',function(){
-        expect(tst.Add("1,4\n3")).toBe(6);
+        expect(tst.Add("1,2\n3")).toBe(6);
     });
 });
