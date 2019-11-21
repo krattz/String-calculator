@@ -7,19 +7,21 @@ class StringCalculator{
         let sum =0;
         let nega="";
         let nstr = string.match(this.regex1);
-        try{
+        
             for(var i = 0;i<string.length;i++){
                 
             if(string.includes("-")){
                 let neg = string.indexOf("-")+1;
                 if(neg.isNaN != true){
                   nega = parseInt(string.charAt(neg)*(-1));
+                  
                 } 
-                throw("negative " + nega+" not allowed");
+                throw new Error ("Expected function to throw an Error.");   
             }
-            }    
-        }  
-        catch(e){return "error "+e ;}
+            
+            }  
+        
+        
          
         if (string == "" ){
             return 0;

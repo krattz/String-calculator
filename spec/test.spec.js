@@ -10,4 +10,9 @@ describe('function that adds numbers from a string',function(){
     it('return sum of multiple numbers seperated by special characters',function(){
         expect(tst.Add("1,2\n3")).toBe(6);
     });
+    it('Negative number will throw an exception',()=>{
+        expect(()=>{
+            tst.Add("-1,1")
+        }).toThrowError('Expected function to throw an Error.');
+    });
 });
