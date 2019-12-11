@@ -1,4 +1,4 @@
-const {StringCalculator} = require("../src/stringCalculator.js");
+const {StringCalculator} = require("../src/string_Calculator.js");
 let tst = new StringCalculator;
 describe('function that adds numbers from a string',function(){
     it('return 0 if string is empty',function(){
